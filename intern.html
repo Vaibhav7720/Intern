@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .sbar {
+            background-color: #f1f1f1;
+            width: 20%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sbar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .sbar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            background-color: #fff;
+            width: 80%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sbar">
+            <a href="#" onclick="sContent('home')">Home</a>
+            <a href="#" onclick="sContent('contact')">Contact</a>
+            <a href="#" onclick="sContent('info')">Information</a>
+            <a href="#" onclick="sContent('guide')">Guide</a>
+        </div>
+        <div class="content" id="home">
+            <h1>Welcome to my Page!</h1>
+            <p>My name is Vaibhav Varshney, and I am recently doing Btech from Indian Institute Of Information Technology Sonepat,which is a national level College. I am looking for an internship in front-end development where I can showcase my knowledge and problem-solving skills.</p>
+        </div>
+        <div class="content" id="contact" style="display: none;">
+            <h1>Contact Us</h1>
+            <p>Email: vaibhavarshney999@gmail.com</p>
+            <p>Phone: 9997690443</p>
+        </div>
+        <div class="content" id="info" style="display: none;">
+            <h1>About Us</h1>
+            <p>In my family,we are 5 members.<br>
+                My father is AO in L.I.C<br>
+                My mom is home-maker<br>
+                My big sis is Data analyst<br>
+                My another sis is Doctor.</p>
+        </div>
+        <div class="content" id="guide" style="display: none;">
+            <h1>User Guide to become an front end developer</h1>
+            <p>To become a front-end developer, you need to learn the basic programming languages for web development, such as HTML, CSS, and JavaScript. You can either enroll in a college program, such as a bachelor’s or master’s degree in information technology or computer science, or train through a tech bootcamp or online courses. You also need to practice building your own websites and projects to build up your portfolio. Getting a certification as a web developer can help you to earn more</p>
+        </div>
+    </div>
+    <script>
+        function sContent(id) {
+            var contents = document.getElementsByClassName("content");
+            for (var i = 0; i < contents.length; i++) {
+                if (contents[i].id == id) {
+                    contents[i].style.display = "block";
+                } else {
+                    contents[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
